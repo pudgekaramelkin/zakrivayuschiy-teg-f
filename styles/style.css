@@ -1,8 +1,6 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
@@ -122,4 +120,99 @@
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
+}
+
+.cards-list {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 100px;
+}
+
+.cards-list__item {
+  inline-size: min(698px, 100%);
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+.cards-list__item__title {
+  padding: 3px 10px;
+  font-size: 1.125rem;
+  font-weight: var(--title-text-weight);
+  border-block-end: 2px solid var(--accent-color);
+}
+
+.cards-list__item__background-and-watermark {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: clamp(0.688rem, 1.315vw + 0.379rem, 1.563rem);
+  opacity: 0.5;
+  font-family: var(--accent-font);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 var(--text-stroke-color), 0 1px var(--text-stroke-color),
+    1px 0 var(--text-stroke-color), 0 -1px var(--text-stroke-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--text-stroke-color)) or
+    (-webkit-text-stroke: 1px var(--text-stroke-color))
+) {
+  .watermark {
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
+    text-shadow: none;
+  }
+}
+
+.cards-list__item__background {
+  inline-size: 100%;
+  display: block;
+}
+
+.cards-list__item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px;
+  border-block-start: 2px solid var(--accent-color);
+}
+
+.cards-list__item__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  padding: 0 25px 25px;
+}
+
+.button {
+  background-color: transparent;
+}
+
+.button__text {
+  text-align: center;
+  font-family: var(--accent-font);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 90%;
+  color: var(--accent-color);
+}
+
+.card__icon-button {
+  inline-size: 27px;
+  block-size: 24px;
+  border: none;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  padding: 9px 17px;
+  border: 2px solid var(--accent-color);
 }
