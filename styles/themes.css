@@ -1,6 +1,91 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-dark {
+  --main-text-weight: 465;
+  --title-text-weight: 785;
+  --background-color: #000;
+  --accent-color: #00cc14;
+  --background-image: repeating-linear-gradient(
+      0.25turn,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0.5turn,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(0.5turn, #007f0c 0.1%, #004306);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --main-text-weight: 465;
+    --title-text-weight: 785;
+    --background-color: #000;
+    --accent-color: #00cc14;
+    --background-image: repeating-linear-gradient(
+        0.25turn,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        0.5turn,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(0.5turn, #007f0c 0.1%, #004306);
+  }
+}
+
+:root.theme-light {
+  --main-text-weight: 400;
+  --title-text-weight: 700;
+  --background-color: #fff;
+  --accent-color: #000;
+  --background-image: repeating-linear-gradient(
+      0.25turn,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0.5turn,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --main-text-weight: 400;
+    --title-text-weight: 700;
+    --background-color: #fff;
+    --accent-color: #000;
+    --background-image: repeating-linear-gradient(
+        0.25turn,
+        #d3d3d3,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        0.5turn,
+        #d3d3d3,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
+  }
+}
