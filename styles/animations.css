@@ -1,22 +1,80 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+.sparks {
+  opacity: 0;
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
+.card__icon-button:hover .core {
+  fill: var(--heart-contour-color);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button:hover .main-body,
+.card__icon-button:hover .core {
+  fill: var(--heart-contour-color);
+}
+
+.card__icon-button:active .core,
+.card__icon-button:active .main-body {
+  fill: var(--heart-sparks-color);
+}
+
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour {
+  fill: var(--heart-sparks-color);
+}
+
+.like-icon.is-liked .core {
+  transition: 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  transition: 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  transition: 0.3s linear 0.06s;
+}
+
+.is-liked .heart {
+  transform-origin: center;
+  animation: scaling 0.3s ease-in 0.1s alternate;
+}
+
+.is-liked .sparks {
+  animation: flash 0.3s ease-in 0.3s alternate;
+}
 @keyframes swing {
   from {
     left: -19px;
   }
   to {
     left: -15px;
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

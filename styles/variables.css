@@ -22,4 +22,6 @@
     linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
   --text-stroke-color: #fff;
   --mix-blend-color: #fff;
+  --heart-contour-color: #000;
+  --heart-sparks-color: #ff0000;
 }

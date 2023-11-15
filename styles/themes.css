@@ -20,6 +20,8 @@
     linear-gradient(0.5turn, #007f0c 0.1%, #004306);
   --text-stroke-color: #000;
   --mix-blend-color: #00cc14;
+  --heart-contour-color: #00cc14;
+  --heart-sparks-color: #ff0000;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -45,6 +47,8 @@
       linear-gradient(0.5turn, #007f0c 0.1%, #004306);
     --text-stroke-color: #000;
     --mix-blend-color: #00cc14;
+    --heart-contour-color: #00cc14;
+    --heart-sparks-color: #ff0000;
   }
 }
 
@@ -70,6 +74,8 @@
     linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
   --text-stroke-color: #fff;
   --mix-blend-color: #fff;
+  --heart-contour-color: #000;
+  --heart-sparks-color: #ff0000;
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -95,5 +101,7 @@
       linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
     --text-stroke-color: #fff;
     --mix-blend-color: #fff;
+    --heart-contour-color: #000;
+    --heart-sparks-color: #ff0000;
   }
 }
