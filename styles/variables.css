@@ -19,6 +19,7 @@
       transparent 2px,
       transparent 4px
     ),
-    repeating-linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
+    linear-gradient(0.5turn, #e7e7e7 0.1%, #1a1a1a);
   --text-stroke-color: #fff;
+  --mix-blend-color: #fff;
 }
