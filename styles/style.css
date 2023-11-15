@@ -149,7 +149,7 @@
 .cards-list__title {
   padding: 3px clamp(0.625rem, 0.3169rem + 1.3146vw, 1.5rem) 3px 10px;
   font-size: 1.125rem;
-  font-variation-settings: 'wght' var(--title-text-weight);
+  font-variation-settings: "wght" var(--title-text-weight);
   border-block-end: 2px solid var(--accent-color);
 }
 
@@ -194,7 +194,7 @@
   padding: 25px;
   border-block-start: 2px solid var(--accent-color);
   line-height: 116.7%;
-  font-variation-settings: 'wght' var(--main-text-weight);
+  font-variation-settings: "wght" var(--main-text-weight);
 }
 
 .cards-list__buttons {

@@ -8,10 +8,6 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--heart-contour-color);
-}
-
-.like-icon:hover .core {
   transition: fill 0.3s 0.03s linear;
   fill: var(--heart-contour-color);
 }
@@ -46,7 +42,7 @@
 }
 
 .like-icon.is-liked .main-body {
-  transition: fill 0.3s linear 0.05s ;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon .contour {
